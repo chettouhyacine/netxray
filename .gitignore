@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.tools/
+coverage/
+playwright-report/
+test-results/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+
+# Local test profile, packaged builds and Freebuff workspace data
+.edge-netxray-profile/
+netxray-*.zip
+.freebuff/

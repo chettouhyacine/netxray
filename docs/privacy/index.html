@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NetXRay Privacy Policy</title>
+    <meta
+      name="description"
+      content="NetXRay analyzes network and cookie data locally in your browser. Nothing is transmitted, and captured sessions live only in session storage."
+    />
+    <!--
+      Single-file policy page: no scripts, no fonts, no external assets, so it can be
+      hosted anywhere static (GitHub Pages, Netlify, S3, …) with no build step.
+
+      TODO before publishing: replace the placeholder contact address below
+      (search for "example.com") with a real, monitored email address.
+    -->
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f8fafc;
+        --surface: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --border: #e2e8f0;
+        --accent: #0d9488;
+        --accent-soft: #ccfbf1;
+        --code-bg: #f1f5f9;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1220;
+          --surface: #111a2b;
+          --text: #e6edf7;
+          --muted: #9aabc2;
+          --border: #223049;
+          --accent: #5eead4;
+          --accent-soft: #10312f;
+          --code-bg: #0f1b2e;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      .wrap {
+        max-width: 46rem;
+        margin: 0 auto;
+        padding: 2.5rem 1.25rem 4rem;
+      }
+      header {
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.625rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        font-size: 1.125rem;
+      }
+      .mark {
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 0.5rem;
+        background: linear-gradient(135deg, #0d9488, #38bdf8);
+        display: inline-block;
+      }
+      h1 {
+        font-size: clamp(1.75rem, 5vw, 2.25rem);
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        margin: 1.25rem 0 0.5rem;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 0.9375rem;
+        margin: 0;
+      }
+      h2 {
+        font-size: 1.25rem;
+        letter-spacing: -0.01em;
+        margin: 2.5rem 0 0.75rem;
+        scroll-margin-top: 1rem;
+      }
+      h3 {
+        font-size: 1rem;
+        margin: 1.5rem 0 0.5rem;
+      }
+      p,
+      li {
+        color: var(--text);
+      }
+      p {
+        margin: 0.75rem 0;
+      }
+      ul,
+      ol {
+        padding-left: 1.25rem;
+      }
+      li {
+        margin: 0.4rem 0;
+      }
+      a {
+        color: var(--accent);
+        text-underline-offset: 2px;
+      }
+      a:hover {
+        text-decoration-thickness: 2px;
+      }
+      .summary {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 0.875rem;
+        padding: 1.25rem 1.25rem 0.75rem;
+      }
+      .summary h2 {
+        margin-top: 0;
+        font-size: 1.0625rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+      }
+      .pill {
+        display: inline-block;
+        background: var(--accent-soft);
+        color: var(--text);
+        border-radius: 999px;
+        padding: 0.1rem 0.6rem;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.9375rem;
+      }
+      th,
+      td {
+        text-align: left;
+        vertical-align: top;
+        padding: 0.6rem 0.75rem;
+        border-bottom: 1px solid var(--border);
+      }
+      th {
+        color: var(--muted);
+        font-weight: 600;
+        font-size: 0.8125rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      code {
+        background: var(--code-bg);
+        border-radius: 0.3rem;
+        padding: 0.1rem 0.35rem;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.875em;
+      }
+      .callout {
+        border-left: 3px solid var(--accent);
+        background: var(--surface);
+        padding: 0.85rem 1rem;
+        border-radius: 0 0.5rem 0.5rem 0;
+        margin: 1.25rem 0;
+      }
+      .callout p {
+        margin: 0;
+      }
+      nav {
+        margin-top: 1.25rem;
+        font-size: 0.9375rem;
+      }
+      nav a {
+        margin-right: 1rem;
+      }
+      footer {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.875rem;
+      }
+      @media print {
+        body {
+          background: #fff;
+          color: #000;
+        }
+        nav {
+          display: none;
+        }
+        .wrap {
+          max-width: none;
+          padding: 0;
+        }
+        .summary,
+        .callout {
+          border: 1px solid #999;
+        }
+        a {
+          color: #000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <span class="brand"><span class="mark" aria-hidden="true"></span>NetXRay</span>
+        <h1>Privacy Policy</h1>
+        <p class="meta">
+          Applies to the NetXRay Chrome extension (version 0.1.0 and later) and this policy page.
+          <br />
+          Effective date: 21 November 2026 &middot; Last updated: 21 November 2026
+        </p>
+        <nav aria-label="Contents">
+          <a href="#summary">Summary</a>
+          <a href="#data">Data accessed</a>
+          <a href="#storage">Storage &amp; retention</a>
+          <a href="#never">What never happens</a>
+          <a href="#exports">Exports</a>
+          <a href="#permissions">Permissions</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="summary" id="summary">
+          <h2>In one paragraph</h2>
+          <p>
+            NetXRay is a developer tool that inspects the network traffic of a page you are already looking at in
+            Chrome DevTools. Everything it reads &mdash; requests, headers, response bodies, cookies, page storage and
+            TLS details &mdash; is processed <strong>on your own computer</strong> and is
+            <strong>never transmitted anywhere</strong>. The extension has no servers, no account, no telemetry, no
+            analytics and no advertising, and it does not sell or share data. Captured sessions are kept only in
+            Chrome&rsquo;s <code>chrome.storage.session</code>, which lives for the browser session and is cleared when
+            you clear the session, navigate, or close the browser.
+          </p>
+        </section>
+
+        <h2 id="data">1. What NetXRay accesses</h2>
+        <p>
+          NetXRay only sees traffic for the tab whose DevTools panel you opened, and only while that panel is open. It
+          reads the following categories of data:
+        </p>
+
+        <h3>Request and response metadata</h3>
+        <p>
+          Through Chrome&rsquo;s own DevTools APIs (<code>chrome.devtools.network</code>), NetXRay reads the URL,
+          method, status code, headers, timings, sizes, resource type, server IP address and HTTP protocol of each
+          request the inspected page makes. This is the same information the DevTools Network panel shows you.
+        </p>
+
+        <h3>Request and response bodies (optional)</h3>
+        <p>
+          Textual bodies (HTML, JSON, XML, JavaScript, GraphQL) are read so that rules can look for leaked secrets,
+          verbose stack traces and similar problems. Body capture is
+          <strong>on by default and can be switched off at any time in NetXRay&rsquo;s Settings</strong>. Bodies are
+          capped at 256&nbsp;KB, are held in the panel&rsquo;s memory only, and are
+          <strong>never written to session storage</strong> &mdash; a recovered session always comes back without
+          bodies.
+        </p>
+
+        <h3>Cookies</h3>
+        <p>
+          For the inspected page&rsquo;s address, NetXRay reads cookie names, values, domain, path,
+          <code>Secure</code>/<code>HttpOnly</code>/<code>SameSite</code> flags and expiry dates so it can warn about
+          unsafe cookie configuration. Reading is <strong>read-only</strong>: NetXRay never sets, edits, deletes or
+          sends cookies.
+        </p>
+
+        <h3>Page web storage (only on request)</h3>
+        <p>
+          <code>localStorage</code> and <code>sessionStorage</code> keys and values for the inspected origin are read
+          only when you press <strong>Read page storage</strong> in the Storage view. Keys and values are truncated at
+          500 characters and are not persisted.
+        </p>
+
+        <h3>TLS and certificate details (only if you opt in)</h3>
+        <p>
+          Certificate subject/issuer, validity dates, SANs, TLS version and cipher are read only after you explicitly
+          enable <strong>Deep TLS inspection</strong>, which asks Chrome for the optional
+          <code>debugger</code> permission. While it is attached Chrome shows its standard &ldquo;started
+          debugging&rdquo; infobar, and you can turn it off at any time. NetXRay cannot attach to
+          <code>chrome://</code> pages or the Chrome Web Store, and it detaches when you disable the feature.
+        </p>
+
+        <h3>Your NetXRay preferences</h3>
+        <p>
+          Interface settings (theme, &ldquo;Teach me&rdquo; mode, body capture, whether you have seen the tour) are
+          stored in the extension page&rsquo;s own <code>localStorage</code> on your device. They contain no browsing
+          data.
+        </p>
+
+        <h2 id="storage">2. Where data is stored and how long it is kept</h2>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Data</th>
+              <th scope="col">Where</th>
+              <th scope="col">How long</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Captured request metadata (up to the last 1,200 requests per tab)</td>
+              <td><code>chrome.storage.session</code>, in memory, on your device</td>
+              <td>Until you clear the session, the tab navigates, or the browser closes. Never written to disk by
+                NetXRay.</td>
+            </tr>
+            <tr>
+              <td>Request/response bodies</td>
+              <td>Panel memory only</td>
+              <td>Recovered sessions never include bodies.</td>
+            </tr>
+            <tr>
+              <td>Cookies and web-storage values</td>
+              <td>Panel memory only</td>
+              <td>Discarded when the panel closes or the session is cleared.</td>
+            </tr>
+            <tr>
+              <td>TLS details</td>
+              <td><code>chrome.storage.session</code>, in memory</td>
+              <td>Until Deep TLS inspection is turned off, the session is cleared, or the browser closes.</td>
+            </tr>
+            <tr>
+              <td>Preferences</td>
+              <td>Extension <code>localStorage</code>, on your device</td>
+              <td>Until you change them or uninstall the extension.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Because NetXRay keeps captured data in <code>chrome.storage.session</code>, nothing is retained across
+          browser restarts. You can erase the current session at any time with the <strong>Clear session</strong>
+          (&times;) button. Uninstalling the extension removes its stored preferences; Chrome discards session storage
+          automatically.
+        </p>
+
+        <h2 id="never">3. What NetXRay never does</h2>
+        <ul>
+          <li>
+            <strong>No transmission.</strong> The extension makes no outbound network requests of its own. It has no
+            backend, no API keys and no remote configuration. Captured data never leaves your computer except when you
+            export a file yourself.
+          </li>
+          <li>
+            <strong>No accounts.</strong> NetXRay has no sign-in, so it holds no name, email address, password or
+            payment information.
+          </li>
+          <li>
+            <strong>No tracking.</strong> No analytics, crash reporting, telemetry, fingerprinting, advertising or
+            profiling. No data is used to determine creditworthiness or for lending purposes.
+          </li>
+          <li>
+            <strong>No selling or sharing.</strong> Data is not sold, rented, transferred or disclosed to the
+            developer, to advertisers, or to any third party.
+          </li>
+          <li>
+            <strong>No remote code.</strong> All code ships inside the extension package and runs under a strict
+            content security policy (<code>script-src 'self'; object-src 'none'; base-uri 'none'</code>). Nothing is
+            fetched or evaluated at runtime, and page content is never executed.
+          </li>
+          <li>
+            <strong>No reading in the background.</strong> NetXRay only observes the tab whose DevTools panel you
+            deliberately opened, and only while that panel is open. It has no access to your browsing history, other
+            tabs, bookmarks or downloads.
+          </li>
+          <li>
+            <strong>No human review.</strong> Nobody &mdash; including the developer &mdash; can read your captured
+            data, because it is never sent to anyone.
+          </li>
+        </ul>
+
+        <h2 id="exports">4. Files you create</h2>
+        <p>
+          Exports are generated in the panel and saved by your browser to your download folder:
+        </p>
+        <ul>
+          <li>
+            <strong>HAR</strong> &mdash; the standard DevTools format. It contains raw headers and bodies, so treat it
+            as sensitive.
+          </li>
+          <li>
+            <strong>JSON and HTML reports</strong> &mdash; normalized events, findings and score, with recognized
+            secrets masked. The HTML report is fully self-contained and loads nothing from the network.
+          </li>
+        </ul>
+        <p>
+          Exported files are ordinary files on your computer, under your control. NetXRay cannot see, upload or delete
+          them after export; storing or sharing them is your decision.
+        </p>
+
+        <h2 id="permissions">5. Why each permission is requested</h2>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Permission</th>
+              <th scope="col">Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>cookies</code> + host access</td>
+              <td>Read cookie attributes for the inspected page so unsafe cookie flags can be flagged. Read-only.</td>
+            </tr>
+            <tr>
+              <td><code>storage</code></td>
+              <td>Keep the crash-recovery session snapshot in <code>chrome.storage.session</code>.</td>
+            </tr>
+            <tr>
+              <td><code>scripting</code></td>
+              <td>Run one small, fixed function to list page storage, and only when you click the button.</td>
+            </tr>
+            <tr>
+              <td><code>debugger</code> (optional)</td>
+              <td>Obtain TLS and certificate details for deep TLS findings, only after you enable it.</td>
+            </tr>
+            <tr>
+              <td>DevTools panel APIs</td>
+              <td>Read requests and timings for the inspected tab, equivalent to the Network panel.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="scope">6. Scope and responsibilities</h2>
+        <p>
+          NetXRay is intended for developers testing applications they own or are explicitly authorized to test. It
+          does not filter what it captures: a session can contain personal data, session tokens and live credentials
+          belonging to whoever used the inspected site. You are responsible for handling captured and exported data in
+          line with the law and your organization&rsquo;s policies. Use NetXRay only where you have permission to
+          inspect traffic.
+        </p>
+
+        <h2 id="children">7. Children</h2>
+        <p>
+          NetXRay is a developer tool for professional use and is not directed to children under 13. It collects no
+          personal information from anyone, including children.
+        </p>
+
+        <h2 id="changes">8. Changes to this policy</h2>
+        <p>
+          If NetXRay&rsquo;s data handling changes, this page will be updated and the &ldquo;last updated&rdquo; date
+          above will change before the new version is published. Material changes will also be noted in the
+          extension&rsquo;s release notes and in the Chrome Web Store listing. Continuing to use a new version after
+          the policy changes means you accept the updated policy.
+        </p>
+
+        <h2 id="contact">9. Contact</h2>
+        <p>
+          Questions about this policy or NetXRay&rsquo;s handling of data? Email
+          <a href="mailto:netxray-privacy@example.com">netxray-privacy@example.com</a>.
+        </p>
+        <div class="callout">
+          <p>
+            <span class="pill">Plain summary</span>
+            &nbsp;Your traffic is analyzed on your machine, never sent anywhere, and kept only in session storage for
+            as long as the browser session lasts.
+          </p>
+        </div>
+      </main>
+
+      <footer>
+        NetXRay is open source under the MIT license. This page is a single static HTML file with no scripts, fonts or
+        external resources.
+      </footer>
+    </div>
+  </body>
+</html>

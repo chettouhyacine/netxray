@@ -1,0 +1,77 @@
+/**
+ * Curated list of well-known analytics, advertising and session-replay hosts.
+ * Matched by suffix so regional and asset subdomains are covered.
+ */
+export const TRACKER_DOMAINS: readonly string[] = [
+  'google-analytics.com',
+  'googletagmanager.com',
+  'doubleclick.net',
+  'googlesyndication.com',
+  'googleadservices.com',
+  'facebook.net',
+  'facebook.com',
+  'connect.facebook.net',
+  'hotjar.com',
+  'hotjar.io',
+  'segment.io',
+  'segment.com',
+  'mixpanel.com',
+  'amplitude.com',
+  'heap.io',
+  'fullstory.com',
+  'clarity.ms',
+  'smartlook.com',
+  'logrocket.com',
+  'newrelic.com',
+  'nr-data.net',
+  'sentry.io',
+  'bugsnag.com',
+  'rollbar.com',
+  'criteo.com',
+  'criteo.net',
+  'taboola.com',
+  'outbrain.com',
+  'adnxs.com',
+  'scorecardresearch.com',
+  'quantserve.com',
+  'branch.io',
+  'appsflyer.com',
+  'adjust.com',
+  'kochava.com',
+  'hubspot.com',
+  'hs-scripts.com',
+  'intercom.io',
+  'intercomcdn.com',
+  'drift.com',
+  'tidio.co',
+  'zendesk.com',
+  'optimizely.com',
+  'vwo.com',
+  'crazyegg.com',
+  'mouseflow.com',
+  'clicktale.net',
+  'yandex.ru',
+  'mc.yandex.ru',
+  'vk.com',
+  'tiktok.com',
+  'analytics.tiktok.com',
+  'linkedin.com',
+  'licdn.com',
+  'twitter.com',
+  'ads-twitter.com',
+  'pinterest.com',
+  'snapchat.com',
+  'sc-static.net',
+  'bing.com',
+  'bat.bing.com',
+  'clarity.ms',
+];
+
+export function trackerForHost(host: string): string | null {
+  const normalized = host.toLowerCase();
+  return (
+    TRACKER_DOMAINS.find(
+      (domain) => normalized === domain || normalized.endsWith(`.${domain}`),
+    ) ?? null
+  );
+}
